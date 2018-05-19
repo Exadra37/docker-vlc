@@ -32,20 +32,35 @@ sudo docker build -t exadra37/vlc ~/.vlc/docker/build
 No matter how we start `vlc` it will map always the current folder into inside the Docker Container
 at `/home/vlc/videos`.
 
+### To open only the Graphical User Interface
+
+```bash
+vlc
+```
+
+### To open from a url
+
+I love Elixir programing language, thus here it goes a link to one of my favorite videos about why
+Developers should be using it...
+
+```bash
+vlc https://www.youtube.com/watch?v=pO4_Wlq8JeI
+```
+
 ### To open a file
 
 ```bash
-vlc path/to/file
+vlc path/to/file.extension
+```
+
+### To open a file with compressed folders
+
+```bash
+vlc path/to/file/with/compressed/folders.zip
 ```
 
 ### To open a folder
 
 ```bash
 vlc path/to/folder
-```
-
-### To open only the User Interface
-
-```bash
-vlc
 ```
