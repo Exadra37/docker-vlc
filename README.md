@@ -30,7 +30,7 @@ sudo docker build -t exadra37/vlc ~/.vlc/docker/build
 ## How to use
 
 No matter how we start `vlc` it will map always the current folder into inside the Docker Container
-at `/home/vlc/videos`.
+at `/home/vlc/media`.
 
 ### To open only the Graphical User Interface
 
@@ -64,3 +64,17 @@ vlc path/to/file/with/compressed/folders.zip
 ```bash
 vlc path/to/folder
 ```
+
+## VLC Shared Folders Between Host and Docker Container
+
+In order to have our media available inside the docker container we need to map it from the host.
+
+Also to persist data from VLC running inside a docker container we need to map some folders 
+between the host and the container.
+
+### Mapped Folders
+
+* Media - `$PWD` into `/home/vlc/media`.
+* Configuration - `~/.docker-vlc/.config` into `/home/vlc/.config`.
+* Cache - `~/.docker-vlc/.cache` into `/home/vlc/.cache`.
+* Snapshots - `~/Pictures/VLC/Snapshots` into `/home/vlc/snapshots`.

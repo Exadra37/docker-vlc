@@ -19,6 +19,6 @@ RUN apt-get update && \
 	 
 USER vlc
 
-WORKDIR /home/vlc/videos
+WORKDIR /home/vlc/media
 
-ENTRYPOINT [ "vlc", "--no-metadata-network-access", "--no-qt-privacy-ask" ]
+ENTRYPOINT ["vlc", "--no-qt-privacy-ask", "--no-metadata-network-access", "--snapshot-path=/home/vlc/snapshots"]
